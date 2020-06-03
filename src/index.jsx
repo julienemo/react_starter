@@ -4,6 +4,7 @@ import { Router, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
 import { Provider } from 'react-redux';
+import 'antd/dist/antd.css';
 import './Styles/index.scss';
 import App from './App';
 import Store from './Redux/Store';
@@ -11,8 +12,10 @@ import Store from './Redux/Store';
 const customHistory = createBrowserHistory();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={Store}>
+    <Router history={customHistory}>
+      <Route component={App} />
+    </Router>
+  </Provider>,
   document.getElementById('root'),
 );
