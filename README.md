@@ -12,13 +12,16 @@ Commit 4: added sub folders for src
 
 Commit 5: added empty `.env` and added to `.gitignore`
 
+Commit 6: added common icons and default images
+
 ---
 
-In usage, need to change the following info in `package.json`
+In usage, need to change the following info in
 
-- `name`
-- `version`
-
-In usage, need to change the following info in `src/Constants/index.js`
-
-- `CookieName`
+1.  `package.json`
+    - `name`
+    - `version`
+2.  `src/Constants/index.js`
+    - `CookieName`
+3.  `public/index.html`
+    - `<title>`
